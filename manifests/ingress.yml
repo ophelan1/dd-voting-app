@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "testddvoteapp-7428"
+    labels:
+        app: "testddvoteapp-7428"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: ddvote-testddvoteapp-7428.656b315bd375445886e3.centralus.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "testddvoteapp-7428"
+                servicePort: 80
