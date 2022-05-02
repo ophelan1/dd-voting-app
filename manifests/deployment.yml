@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "testddvoteapp-7428"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "testddvoteapp-7428"
+  template:
+    metadata:
+      labels:
+        app: "testddvoteapp-7428"
+    spec:
+      containers:
+        - name: "testddvoteapp-7428"
+          image: "ddvoteapp.azurecr.io/testddvoteapp"
+          ports:
+          - containerPort: 80
